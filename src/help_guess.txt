@@ -1,0 +1,30 @@
+[Guess] [Help]
+计分规则:
+开局固定0分
+char: 每次猜字母固定-5分, 每中一个字母%2B1分
+name: 猜对了%2B20分, 猜错了-20分, 因此不建议盲狙, 分会很低, 而且因为name高收益, 所以建议能答对就答对
+
+在玩家分别出题的情况下, 计算分数的规则会有更大改动(测试中)
+因为是玩家自己出题, 所以如果被猜中了, 出这题的玩家会因应被猜中的顺序相应的扣分, 而猜中的玩家也会在原本20分的基础上，额外按猜中的顺序加分, 具体为:
+扣分的玩家: -34-(还没被猜出的题数量*2)
+加分的玩家: (基础分)20%2B(额外分)50%2B还没被猜出的题数量 * 3
+
+缩写列表:
+arc - Arcaea
+mai - maimai
+chu - CHUNITHM
+ongeki - オンゲキ
+sdvx - SOUND VOLTEX
+gc - GROOVE COASTER
+iidx - beatmania IIDX
+md - Muse Dash
+cy - Cytus
+cy2 - Cytus 2
+de - Deemo
+la - Lanota
+dy - Dynamix
+voez - Voez兰空
+pjsk - Project Sekai
+bang - BanGDream!
+taiko - 太鼓の達人
+ts - Tone Sphere
