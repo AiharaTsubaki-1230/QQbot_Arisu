@@ -57,7 +57,7 @@ def csearch_all(search):
                 msg += chuni_index[data["id"]] + ". " + data["title"] + "\n"
             return msg[:-1]
 
-print(csearch_all("I'm so happy"))
+print(csearch_all("otorii"))
 
 def search_by_id(id):
     request = chuni_data[id]
@@ -103,9 +103,9 @@ def calc(arg1, arg2):
     
     error = 1010000 - target
 
-    justice_deduct = 10000 // maxcombo + 1
-    attack_deduct = 1010000 // (maxcombo * 2) + 1
-    miss_deduct = 1010000 // maxcombo + 1
+    justice_deduct = round(10000 / maxcombo, 2)
+    attack_deduct = round(1010000 / (maxcombo * 2), 2)
+    miss_deduct = round(1010000 / maxcombo, 2)
 
     justice_error = round(error / justice_deduct, 2)
     attack_error = round(error / attack_deduct, 2)
@@ -114,3 +114,4 @@ def calc(arg1, arg2):
     msg = f"[{diff}]{id}. {request['meta']['title']}\n目标分数:{target}\n允许最多JUSTICE数量: {justice_error}(每个-{justice_deduct})\n允许最多ATTACK数量: {attack_error}(每个-{attack_deduct})\n允许最多MISS数量: {miss_error}(每个-{miss_deduct})"
     return msg
 
+print(calc("紫c718", "1007500"))
